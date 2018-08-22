@@ -141,5 +141,9 @@ var NLSLoaderPlugin;
         return NLSPlugin;
     }());
     NLSLoaderPlugin.NLSPlugin = NLSPlugin;
-    define('vs/nls', new NLSPlugin(new Environment()));
+    if (typeof module !== 'undefined') {
+        module.exports = new NLSPlugin(new Environment());
+    } else {
+        define('vs/nls', new NLSPlugin(new Environment()));
+    }
 })(NLSLoaderPlugin || (NLSLoaderPlugin = {}));
