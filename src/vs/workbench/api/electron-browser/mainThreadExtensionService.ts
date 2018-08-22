@@ -7,22 +7,22 @@
 import Severity from 'vs/base/common/severity';
 import { IExtensionService } from 'vs/workbench/services/extensions/common/extensions';
 import { MainThreadExtensionServiceShape, MainContext, IExtHostContext } from '../node/extHost.protocol';
-import { ExtensionService } from 'vs/workbench/services/extensions/electron-browser/extensionService';
+// import { ExtensionService } from 'vs/workbench/services/extensions/electron-browser/extensionService';
 import { extHostNamedCustomer } from 'vs/workbench/api/electron-browser/extHostCustomers';
 import { SerializedError } from 'vs/base/common/errors';
 
 @extHostNamedCustomer(MainContext.MainThreadExtensionService)
 export class MainThreadExtensionService implements MainThreadExtensionServiceShape {
 
-	private readonly _extensionService: ExtensionService;
+	private readonly _extensionService: any;
 
 	constructor(
 		extHostContext: IExtHostContext,
 		@IExtensionService extensionService: IExtensionService
 	) {
-		if (extensionService instanceof ExtensionService) {
+		// if (extensionService instanceof ExtensionService) {
 			this._extensionService = extensionService;
-		}
+		// }
 	}
 
 	public dispose(): void {
