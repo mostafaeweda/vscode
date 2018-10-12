@@ -3,8 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import 'vs/css!./octicons/octicons';
-import 'vs/css!./octicons/octicons-animations';
+// import 'vs/css!./octicons/octicons';
+// import 'vs/css!./octicons/octicons-animations';
 import { escape } from 'vs/base/common/strings';
 
 function expand(text: string): string {

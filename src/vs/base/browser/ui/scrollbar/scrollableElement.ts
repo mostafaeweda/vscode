@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 'use strict';
 
-import 'vs/css!./media/scrollbars';
+// import 'vs/css!./media/scrollbars';
 
 import * as DomUtils from 'vs/base/browser/dom';
 import * as Platform from 'vs/base/common/platform';
